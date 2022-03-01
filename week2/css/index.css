@@ -1,0 +1,775 @@
+/***********top黑色顶部栏*************/
+
+.top {
+    height: 70px;
+    background-color: #242424;
+}
+
+.top .wrap,
+.header .wrap {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+
+/*logo*/
+
+.top .wrap .logo {
+    float: left;
+    width: 176px;
+    height: 69px;
+}
+
+
+/*表单*/
+
+.top .wrap li a {
+    float: left;
+    padding: 0 19px;
+    height: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    line-height: 70px;
+    color: #ccc;
+}
+
+.wrap .nav li .slt,
+.wrap .nav li a:hover {
+    background: #000;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*搜索框*/
+
+.wrap .srch {
+    float: right;
+    margin: 20px 10px 0 0;
+    width: 158px;
+    height: 32px;
+    background-position: 0 -98px;
+    background-color: #fff;
+    border-radius: 32px;
+}
+
+.wrap .srch .parent {
+    position: relative;
+    margin: 8px 0 0 30px;
+}
+
+.wrap .srch label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #9b9b9b;
+    cursor: text;
+}
+
+
+/*创作者中心&登录*/
+
+.wrap .enter-login {
+    padding: 0px;
+    float: right;
+    height: 70px;
+}
+
+.wrap .enter-login a {
+    display: block;
+    width: 50px;
+    color: #787878;
+    text-align: center;
+    line-height: 70px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.wrap .creator-center {
+    float: right;
+}
+
+.wrap .creator-center .creator {
+    display: block;
+    float: right;
+    width: 90px;
+    height: 30px;
+    margin-top: 20px;
+    border: 1px solid #4F4F4F;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #ccc;
+}
+
+
+/**********header红色头部栏***********/
+
+.header {
+    height: 35px;
+    background-color: #C20C0C;
+    border-bottom: 1px solid #a40011;
+}
+
+.header .subnav {
+    margin-left: 180px;
+}
+
+.header .subnav a {
+    float: left;
+    height: 34px;
+    padding: 0 20px;
+    /*background-color: #C20C0C;*/
+    text-align: center;
+}
+
+.header .subnav em {
+    line-height: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    background-color: #C20C0C;
+    height: 20px;
+    margin-top: 8px;
+    border-radius: 20px;
+    width: auto;
+    display: inline-block;
+}
+
+.wrap .subnav .slt em,
+.wrap .subnav a :hover {
+    background-color: #9B0909;
+}
+
+
+/***********banner轮播页**************/
+
+.banner {
+    background-image: url("http://p1.music.126.net/51XOzpdjzlPnf5OJyCaSvA==/109951166881357749.jpg?imageView&blur=40x20");
+    background-size: 6000px;
+    background-position: center center;
+}
+
+.banner .wrap {
+    position: relative;
+    width: 982px;
+    height: 285px;
+    margin: 0 auto;
+}
+
+.banner .wrap .ban-img {
+    background-color: #000;
+    float: left;
+    width: 730px;
+}
+
+.banner .wrap .ban-img img {
+    display: block;
+    float: bottom;
+    width: 730px;
+}
+
+
+/***下载***/
+
+.banner .wrap .download {
+    position: relative;
+    float: right;
+    width: 252px;
+    height: 285px;
+}
+
+.banner .wrap .download-img {
+    background-image: url("https://s2.music.126.net/style/web2/img/index/download.png?697216cae463cab8d215387a3b83593c");
+    width: 252px;
+    height: 285px;
+    float: right;
+    position: absolute;
+    z-index: 2;
+    right: -1;
+    background-position: 0 0;
+}
+
+.banner .wrap .download p {
+    position: absolute;
+    margin: 256px 0 0 15px;
+    text-align: center;
+    color: #ffffff54;
+    z-index: 5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner .wrap .download .shadow-left {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 20px;
+    height: 285px;
+    background-position: -1px 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(37, 37, 37, 0.6) 100%);
+}
+
+.banner .wrap .download .shadow-right {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 252px;
+    width: 20px;
+    height: 285px;
+    background-position: 1px 0;
+    background: linear-gradient(90deg, rgba(37, 37, 37, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.banner .wrap .btn-left,
+.banner .wrap .btn-right {
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    width: 37px;
+    height: 63px;
+    background-image: url(https://s2.music.126.net/style/web2/img/index/banner.png?bb5f2fbeffca6ceded720abacdb2bbdb);
+}
+
+.banner .wrap .btn-left {
+    left: -68px;
+    background-position: 0 300px;
+}
+
+.banner .wrap .btn-left:hover {
+    left: -68px;
+    background-position: 0 230px;
+}
+
+.banner .wrap .btn-right {
+    right: -68px;
+    background-position: 0 156px;
+}
+
+.banner .wrap .btn-right:hover {
+    right: -68px;
+    background-position: 0 86px;
+}
+
+
+/***********recomend-module**************/
+
+.discover-module {
+    position: relative;
+    width: 100%;
+    background-color: rgb(250, 250, 250);
+    background-position: center center;
+}
+
+.discover-module .wrap {
+    margin: 0 auto;
+    width: 980px;
+    min-height: 1400px;
+    background-color: white;
+    border: 1px solid #d3d3d3;
+}
+
+.discover-module .wrap .left-section {
+    position: relative;
+    float: left;
+    width: 730px;
+    border: 0 solid black;
+}
+
+.discover-module .wrap .right-section {
+    position: relative;
+    float: right;
+    width: 250px;
+    border: 0 solid black;
+}
+
+.discover-module .wrap .left-section .wrap1,
+.discover-module .wrap .right-section .wrap1 {
+    padding: 20px 20px 40px 20px;
+}
+
+.discover-module .rcmd {
+    height: 33px;
+    padding: 0 10px 0 34px;
+    background-image: url(https://s2.music.126.net/style/web2/img/index/index.png?1a5654a5c00ac7d8065f27ec487e7c3e);
+    background-position: -225px -156px;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid #C10D0C;
+}
+
+.rcmd .hotrcmd {
+    float: left;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+.rcmd .tab {
+    float: left;
+    margin: 7px 0 0 20px;
+    font-size: 12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rcmd .tab a {
+    padding: 0 10px 0 10px;
+}
+
+.rcmd .more {
+    float: right;
+    margin-top: 9px;
+}
+
+.rcmd .more i {
+    display: inline-block;
+    vertical-align: middle;
+    height: 12px;
+    width: 12px;
+    background-image: url(https://s2.music.126.net/style/web2/img/index/index.png?1a5654a5c00ac7d8065f27ec487e7c3e);
+    background-position: 0 -240px;
+}
+
+.rcmd .tab a:hover,
+.rcmd .more a:hover {
+    color: #666;
+}
+
+.song-list {
+    margin: 20px 0 0 -42px;
+}
+
+.song-list li {
+    display: inline-block;
+    float: left;
+    width: 140px;
+    height: 188px;
+    padding: 0 0 30px 43px;
+    line-height: 1.4;
+    font-size: 12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.song-list .cover {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+}
+
+.song-list .cover a {
+    position: absolute;
+    left: 0px;
+    width: 140px;
+    height: 140px;
+    background-image: url(https://s2.music.126.net/style/web2/img/coverall.png?3f5a2e64af5f0749e5a8a7767f72b9ed);
+    background-position: 0 0;
+}
+
+.song-list .cover .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 27px;
+    background-position: 0 -537px;
+    color: #ccc;
+    background-image: url(https://s2.music.126.net/style/web2/img/coverall.png?3f5a2e64af5f0749e5a8a7767f72b9ed);
+}
+
+.song-list .cover .icon-play {
+    position: absolute;
+    left: 120px;
+    bottom: 5px;
+    width: 16px;
+    height: 17px;
+    background-position: 0 0;
+    background-image: url(https://s2.music.126.net/style/web2/img/iconall.png?d09c81d953ce07d4c1d997d1e16e49bf);
+}
+
+.song-list .cover .icon-play:hover {
+    background-position: 0 -60.1px;
+}
+
+.song-list .cover .icon-headset {
+    position: absolute;
+    margin: 8px;
+    width: 16px;
+    height: 17px;
+    background-position: 0 -24px;
+    background-image: url(https://s2.music.126.net/style/web2/img/iconall.png?d09c81d953ce07d4c1d997d1e16e49bf);
+}
+
+.song-list .cover .nb {
+    position: absolute;
+    margin-top: 6px;
+    left: 25px;
+}
+
+.song-list p {
+    position: relative;
+    top: 150px;
+    width: 140px;
+    font-size: 14px;
+}
+
+.discover2 .board {
+    position: relative;
+    margin: 20px 0 40px 0;
+    height: 186px;
+    border: 1.2px solid #d3d3d3;
+    background-color: rgb(240, 240, 240);
+}
+
+.discover2 .board .left-roll {
+    float: left;
+    margin: 75px 5px;
+    width: 17px;
+    height: 17px;
+}
+
+.discover2 .board .left-roll a {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-image: url(../image/index.png);
+    background-position: -260px -75px;
+}
+
+.discover2 .board .left-roll a :hover {
+    background-position: -280px -75px;
+}
+
+.discover2 .board .right-roll {
+    float: right;
+    margin: 75px 5px 0 0;
+    width: 17px;
+    height: 17px;
+}
+
+.discover2 .board .right-roll a {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-image: url(../image/index.png);
+    background-position: -300px -75px;
+}
+
+.discover2 .board .right-roll a :hover {
+    background-position: -320px -75px;
+}
+
+.discover2 .cd-cover {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-320px);
+    width: 640px;
+    height: 150px;
+    margin: 28px 0 0 0;
+    padding: 0;
+}
+
+.discover2 .cd-cover ul {
+    width: 100%;
+    height: 100%;
+}
+
+.discover2 .cd-cover li {
+    display: inline;
+    float: left;
+    width: 118px;
+    height: 150px;
+    margin: 0 5px;
+}
+
+.discover2 .new-cover {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 70px;
+}
+
+.discover2 .new-cover .img-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 118px;
+    height: 100px;
+    background-position: 0 -570px;
+    background-image: url(../image/coverall.png);
+    background-repeat: no-repeat;
+}
+
+.cd-cover .song-name {
+    position: relative;
+    margin: 8px 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000;
+}
+
+.cd-cover .singer-name {
+    position: relative;
+    margin: 2px 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: rgb(180, 180, 180);
+}
+
+.cd-cover .singer-name a {
+    color: #9b9b9b;
+}
+
+.cd-cover .song-name :hover {
+    color: #000;
+}
+
+.discover-module .discover1 {
+    height: 530px;
+}
+
+.right-section .user-info {
+    height: 126px;
+    top: 0;
+    background-image: url(../image/index.png);
+    background-position: 0 0;
+}
+
+.right-section .user-info p {
+    width: 205px;
+    margin-left: 24px;
+    padding: 16px 0;
+    line-height: 22px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-section .user-info a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50px);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100px;
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    background-image: url(../image/index.png);
+    background-position: 0 -195px;
+}
+
+.right-section .user-info a:hover {
+    background-position: -110px -195px;
+}
+
+.right-section .singer {
+    margin-top: 15px;
+    height: 500px;
+}
+
+.right-section .singer .singer-title h3,
+.right-section .dj .dj-title h3 {
+    height: 23px;
+    margin: 0 20px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.singer .singer-title h3 span,
+.dj .dj-title h3 span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    float: left;
+}
+
+.singer .singer-title h3 a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+    float: right;
+}
+
+.singer .singer-tag {
+    width: 210px;
+    margin: 10px 0;
+}
+
+.singer .singer-box {
+    width: 210px;
+    height: 62px;
+    border: 1px solid #dfdfdf;
+    margin: 15px 20px;
+    background-color: #fafafa;
+}
+
+.singer .singer-box img {
+    left: 0;
+    width: 62px;
+    height: 62px;
+}
+
+.singer .singer-box .introduce {
+    float: right;
+    width: 148px;
+    height: 62px;
+}
+
+.singer .singer-box .introduce:hover {
+    background-color: #9b9b9b13;
+}
+
+.singer .singer-box .introduce .s-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 0 0 15px;
+}
+
+.singer .singer-box .introduce .s-extra {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #666;
+    padding: 5px 0 0 15px;
+}
+
+.singer .apply .apply-btn {
+    position: absolute;
+    height: 29px;
+    width: 210px;
+    line-height: 31px;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 20px;
+    background-image: url(../image/button2.png);
+    background-position: right -60px;
+    border: 1px solid #dfdfdf;
+}
+
+.singer .apply .apply-btn i {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.right-section .dj {
+    margin-top: 5px;
+    height: 500px;
+}
+
+.dj .dj-tag {
+    width: 210px;
+    margin: 5px 0;
+}
+
+.dj .dj-box {
+    width: 210px;
+    height: 50px;
+    margin: 1px 20px;
+}
+
+.dj .dj-box img {
+    left: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.dj .dj-box .introduce {
+    float: right;
+    width: 160px;
+    height: 40px;
+}
+
+.dj .dj-box .introduce .s-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333;
+    padding: 3px 0 0 0;
+}
+
+.dj .dj-box .introduce .s-extra {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #666;
+    padding: 2px 0 0 0;
+}
+
+.discover3 .bill {
+    height: 472px;
+    margin-top: 20px;
+    padding-left: 1px;
+    background-image: url(../image/index_bill.png);
+}
+
+.discover3 .line1,
+.discover3 .line2,
+.discover3 .line3 {
+    float: left;
+    width: 229.67px;
+}
+
+.discover3 .line-top {
+    height: 100px;
+    padding: 20px 0 0 19px;
+}
+
+.discover3 .line-top img {
+    position: relative;
+    float: left;
+    display: inline;
+    width: 80px;
+    height: 80px;
+}
+
+.bill dd ol {
+    height: 319px;
+    margin-left: 50px;
+    line-height: 32px;
+}
+
+.bill dd li {
+    height: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bill dd li span {
+    float: left;
+    position: relative;
+    width: 35px;
+    height: 32px;
+    margin-left: -35px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.bill dd li .top3 {
+    color: #a40011;
+}
+
+.bill .more {
+    clear: both;
+    height: 32px;
+    margin-right: 32px;
+    text-align: right;
+    line-height: 32px;
+}
+
+.bill .more a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+}
+
+.bill .more a:hover {
+    font-weight: bold;
+    color: #333;
+}
+
+s

@@ -1,0 +1,23 @@
+.top .wrap .logo,
+.wrap .srch,
+.wrap li .hot {
+    background-image: url("https://s2.music.126.net/style/web2/img/frame/topbar.png?79b15b371ac691457849f05e64b4c40a");
+    background-repeat: no-repeat;
+}
+
+.wrap .hot {
+    float: left;
+    margin-top: 20px;
+    margin-left: -15px;
+    height: 19px;
+    width: 28px;
+    background-position: -190px 0;
+}
+
+
+/*
+.banner .download .download-img {
+    background-image: url("https://s2.music.126.net/style/web2/img/index/download.png?697216cae463cab8d215387a3b83593c");
+    background-repeat: no-repeat;
+}
+*/
