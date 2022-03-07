@@ -8,6 +8,7 @@ const INIT_POS = {
     row: 0,
     col: 0
 }
+const TIME = 20;
 var score = 0;
 var game_on = 0;
 
@@ -162,23 +163,18 @@ main();
 
 var oStartGame = document.getElementById('btn');
 oStartGame.addEventListener("click", function() {
-    var time = 10;
+    var time = TIME;
     const oTime = document.getElementsByClassName('time')[0];
     timer = setInterval(function() {
         oTime.innerHTML = time + ' s';
         if (time > 0) {
             time--;
         } else if (time = 0) {
-            popup(false);
+            /*popup(false);*/
         }
     }, 1000);
 }, false);
+
 oStartGame.addEventListener("click", function() {
     movePerson(map, INIT_POS.row, INIT_POS.col);
 })
-
-/*
-oBtn.addEventListener("click", function() {
-    alert("第1次");
-}, false);
-*/
