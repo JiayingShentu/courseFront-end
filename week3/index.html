@@ -9,17 +9,23 @@
 
 <body>
     <div class="map">
-
     </div>
     <div class="info">
-        <input type="button" id='btn' value="StartGame" />
+        <input type="button" id='btnStart' value="StartGame" />
         <span class="time-text">剩余时间：</span>
-        <span class="time">20 s</span>
+        <span class="time">15 s</span>
         <span class="score-text">分数：</span>
         <span class="score">0</span>
     </div>
     <div class="result">
-
+    </div>
+    <div class="intro">
+        <ul>
+            <li><img src="image/dot.svg"> &nbsp 吃豆子可以随机得到8分、9分或10分</li>
+            <li><img src="image/heart.svg"> &nbsp 收集到爱心可以增加5s时间</li>
+            <li><img src="image/ghost.svg"> &nbsp 遇到幽灵会扣除5分</li>
+            <li><img src="image/bomb.png"> &nbsp 踩到炸弹扣除100分，游戏结束</li>
+        </ul>
     </div>
     <script src="js/game.js"></script>
 </body>
