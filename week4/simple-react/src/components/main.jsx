@@ -1,12 +1,18 @@
-import { Item } from './item';
+import React, { Component } from 'react';
 
-export function Main() {
-  return (
-    <section className="main">
-      <ul className="todo-list">
-        <Item />
-        <Item />
-      </ul>
-    </section>
-  );
+import Item from './item';
+
+export default class Main extends Component {
+  render() {
+    const { todos } = this.props;
+    return (
+      <section className="main">
+        <ul className="todo-list">
+          {todos.map(todo => (
+            <Item key={todo.id} {...todo} />
+          ))}
+        </ul>
+      </section>
+    );
+  }
 }
