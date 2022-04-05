@@ -8,6 +8,10 @@ export default class Item extends Component {
     console.log(this.state.mouse);
   };
 
+  handleCheck = id => event => {
+    this.props.updateTodo(id, event.target.checked);
+  };
+
   render() {
     const { id, name, completed } = this.props;
     return (
@@ -19,6 +23,7 @@ export default class Item extends Component {
             className="toggle"
             type={'checkbox'}
             defaultChecked={completed}
+            onChange={this.handleCheck(id)}
           />
           <label>{name}</label>
           <button

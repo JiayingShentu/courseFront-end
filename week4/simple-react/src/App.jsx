@@ -19,7 +19,19 @@ export default class App extends Component {
     const { todos } = this.state;
     const newtodo = [todo, ...todos];
     this.setState({ todos: newtodo });
-    console.log(newtodo);
+  };
+
+  updateTodo = (id, completed) => {
+    const { todos } = this.state;
+    const newTodo = todos.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, completed };
+      } else {
+        return todo;
+      }
+    });
+    this.setState({ todos: newTodo });
+    console.log(newTodo);
   };
 
   render() {
@@ -28,7 +40,7 @@ export default class App extends Component {
       <div className="todoapp">
         <Title />
         <Header addTodo={this.addTodo} />
-        <Main todos={todos} />
+        <Main todos={todos} updateTodo={this.updateTodo} />
         <Footer />
       </div>
     );
