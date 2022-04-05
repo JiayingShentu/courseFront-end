@@ -23,7 +23,7 @@ export default class Item extends Component {
           <label>{name}</label>
           <button
             type="button"
-            className="destory"
+            className="destroy"
             style={{
               display: this.state.mouse ? 'block' : 'none',
             }}></button>
