@@ -26,7 +26,7 @@ export default class Item extends Component {
           <input
             className="toggle"
             type={'checkbox'}
-            defaultChecked={completed}
+            checked={completed}
             onChange={this.handleCheck(id)}
           />
           <label>{name}</label>

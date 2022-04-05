@@ -54,6 +54,19 @@ export default class App extends Component {
     this.setState({ type: filterType });
   };
 
+  alldoneTodo = () => {
+    const { todos } = this.state;
+    let flag;
+    if (todos.length !== todos.filter(todo => todo.completed).length) {
+      flag = true;
+    } else {
+      flag = false;
+    }
+    const newTodo = todos.map(todo => ({ ...todo, completed: flag }));
+    this.setState({ todos: newTodo });
+    console.log(todos);
+  };
+
   render() {
     const { todos, type } = this.state;
     return (
@@ -65,6 +78,7 @@ export default class App extends Component {
           type={type}
           updateTodo={this.updateTodo}
           deleteTodo={this.deleteTodo}
+          alldoneTodo={this.alldoneTodo}
         />
         <Footer
           todos={todos}

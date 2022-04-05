@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import Item from './item';
 
 export default class Main extends Component {
+  allCompleted = () => {
+    this.props.alldoneTodo();
+  };
+
   render() {
     const { todos, type, updateTodo, deleteTodo } = this.props;
 
@@ -19,6 +23,12 @@ export default class Main extends Component {
 
     return (
       <section className="main">
+        <input id="toggle-all" className="toggle-all" type="checkbox"></input>
+        <label
+          onClick={() => {
+            this.allCompleted();
+          }}
+          htmlFor="toggle-all"></label>
         <ul className="todo-list">
           {showTodo.map(todo => (
             <Item
