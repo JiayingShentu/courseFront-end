@@ -23,7 +23,13 @@ export default class Main extends Component {
 
     return (
       <section className="main">
-        <input id="toggle-all" className="toggle-all" type="checkbox"></input>
+        <input
+          id="toggle-all"
+          className="toggle-all"
+          type="checkbox"
+          checked={
+            todos.filter(todo => todo.completed === false).length === 0
+          }></input>
         <label
           onClick={() => {
             this.allCompleted();

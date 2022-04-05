@@ -8,6 +8,7 @@ export default class Footer extends Component {
   render() {
     const { todos } = this.props;
     const total = todos.filter(todo => todo.completed === false).length;
+    const haveDone = todos.filter(todo => todo.completed === true).length !== 0;
     return (
       <div className="footer">
         <span className="todo-count">
@@ -49,7 +50,7 @@ export default class Footer extends Component {
             this.handleClearCompleted();
           }}
           className="clear-completed"
-          style={{ display: 'block' }}>
+          style={{ display: haveDone ? 'block' : 'none' }}>
           Clear completed
         </button>
       </div>

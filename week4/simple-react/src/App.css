@@ -293,6 +293,7 @@ body {
 
 .filters li {
     display: inline;
+    cursor: pointer;
 }
 
 .filters li a {
