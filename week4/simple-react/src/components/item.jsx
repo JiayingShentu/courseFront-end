@@ -1,14 +1,32 @@
 import React, { Component } from 'react';
 
 export default class Item extends Component {
+  state = { mouse: false };
+
+  handleMouse = flag => () => {
+    this.setState({ mouse: flag });
+    console.log(this.state.mouse);
+  };
+
   render() {
-    const { id, name, done } = this.props;
+    const { id, name, completed } = this.props;
     return (
-      <li>
+      <li
+        onMouseEnter={this.handleMouse(true)}
+        onMouseLeave={this.handleMouse(false)}>
         <div className="view">
-          <input className="toggle" type={'checkbox'} defaultChecked={true} />
+          <input
+            className="toggle"
+            type={'checkbox'}
+            defaultChecked={completed}
+          />
           <label>{name}</label>
-          <button type="button" className="destory"></button>
+          <button
+            type="button"
+            className="destory"
+            style={{
+              display: this.state.mouse ? 'block' : 'none',
+            }}></button>
         </div>
       </li>
     );
