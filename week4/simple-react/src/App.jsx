@@ -13,6 +13,7 @@ export default class App extends Component {
       { id: '02', name: '睡觉', completed: false },
       { id: '03', name: '写代码', completed: false },
     ],
+    type: 'all',
   };
 
   addTodo = todo => {
@@ -41,18 +42,36 @@ export default class App extends Component {
     console.log(newTodo);
   };
 
-  render() {
+  clearCompleted = () => {
     const { todos } = this.state;
+    const newTodo = todos.filter(todo => todo.completed === false);
+    this.setState({ todos: newTodo });
+    console.log(newTodo);
+  };
+
+  filterHandler = filterType => {
+    const { type } = this.state;
+    this.setState({ type: filterType });
+  };
+
+  render() {
+    const { todos, type } = this.state;
     return (
       <div className="todoapp">
         <Title />
         <Header addTodo={this.addTodo} />
         <Main
           todos={todos}
+          type={type}
           updateTodo={this.updateTodo}
           deleteTodo={this.deleteTodo}
         />
-        <Footer todos={todos} />
+        <Footer
+          todos={todos}
+          type={type}
+          clearCompleted={this.clearCompleted}
+          filterHandler={this.filterHandler}
+        />
       </div>
     );
   }

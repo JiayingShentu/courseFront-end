@@ -19,6 +19,7 @@ export default class Item extends Component {
     const { id, name, completed } = this.props;
     return (
       <li
+        className={completed === true ? 'completed' : ''}
         onMouseEnter={this.handleMouse(true)}
         onMouseLeave={this.handleMouse(false)}>
         <div className="view">
