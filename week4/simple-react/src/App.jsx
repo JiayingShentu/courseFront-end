@@ -34,14 +34,25 @@ export default class App extends Component {
     console.log(newTodo);
   };
 
+  deleteTodo = id => {
+    const { todos } = this.state;
+    const newTodo = todos.filter(todo => todo.id !== id);
+    this.setState({ todos: newTodo });
+    console.log(newTodo);
+  };
+
   render() {
     const { todos } = this.state;
     return (
       <div className="todoapp">
         <Title />
         <Header addTodo={this.addTodo} />
-        <Main todos={todos} updateTodo={this.updateTodo} />
-        <Footer />
+        <Main
+          todos={todos}
+          updateTodo={this.updateTodo}
+          deleteTodo={this.deleteTodo}
+        />
+        <Footer todos={todos} />
       </div>
     );
   }

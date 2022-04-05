@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 export default class Footer extends Component {
   render() {
+    const { todos } = this.props;
+
     return (
       <div className="footer">
         <span className="todo-count">

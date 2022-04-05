@@ -5,11 +5,14 @@ export default class Item extends Component {
 
   handleMouse = flag => () => {
     this.setState({ mouse: flag });
-    console.log(this.state.mouse);
   };
 
   handleCheck = id => event => {
     this.props.updateTodo(id, event.target.checked);
+  };
+
+  handleDelete = id => {
+    this.props.deleteTodo(id);
   };
 
   render() {
@@ -27,6 +30,9 @@ export default class Item extends Component {
           />
           <label>{name}</label>
           <button
+            onClick={() => {
+              this.handleDelete(id);
+            }}
             type="button"
             className="destroy"
             style={{
