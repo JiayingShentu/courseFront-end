@@ -16,6 +16,6 @@
 &ensp; &ensp; 3. client接收信息     
 </br>
 </br>
-[![]](https://github.com/JiayingShentu/courseFront-end/blob/main/ignore/client.png)     
-[![]](https://github.com/JiayingShentu/courseFront-end/blob/main/ignore/server.png)     
+<img src=https://github.com/JiayingShentu/courseFront-end/blob/main/ignore/client.png>     
+<img src=https://github.com/JiayingShentu/courseFront-end/blob/main/ignore/server.png>     
 
