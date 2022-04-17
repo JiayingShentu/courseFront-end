@@ -10,8 +10,8 @@
 &ensp; &ensp; 举例：'#/$//Hello world/#//$'解析为'$/Hello world#/'
 </br>
 </br>
-:white_check_mark: 使用net模块实现两个进程基于该协议进行通信 
-&ensp; &ensp; 1. client向server发送一条信息    
+:white_check_mark: 使用net模块实现两个进程基于该协议进行通信     
+&ensp; &ensp; 1. client向server发送一条信息     
 &ensp; &ensp; 2. server接收信息，并向client回复一条信息，server关闭socket进程     
 &ensp; &ensp; 3. client接收信息     
 </br>
