@@ -2,9 +2,16 @@
     box-sizing: border-box;
 }
 
+a {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+html,
 body {
     border: 0;
     padding: 0;
+    margin: 0;
 }
 
 #full-page {
@@ -26,6 +33,14 @@ body {
     width: 100%;
 }
 
+.base-bar .bartag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    color: white;
+    align-items: center;
+    bottom: 2rem;
+}
+
 .modernjs-logo {
     height: 1.8rem;
     flex: 0 0 auto;
@@ -36,8 +51,119 @@ body {
     margin: 0 16px 0 0;
 }
 
-.l-base-bar {}
+.l-base-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    height: 37px;
+    min-width: 0;
+}
 
-.r-base-bar {}
+.r-base-bar {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 0;
+}
+
+.toggle {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.toggle_button {
+    background-color: #4d4d4d;
+    border-radius: 30px;
+    height: 24px;
+    transition-duration: 0.2s;
+    width: 50px;
+}
+
+.toggle_moonset,
+.toggle_sunset {
+    bottom: 0;
+    height: 10px;
+    margin: auto 0;
+    top: 0;
+    position: absolute;
+}
+
+.toggle_moonset {
+    left: 8px;
+    right: 10px;
+    opacity: 0;
+    transition: opacity .25s;
+    width: 14px;
+}
+
+.toggle_sunset {
+    right: 10px;
+    width: 10px;
+    left: 30px;
+    /**/
+}
+
+.toggle_set {
+    align-items: center;
+    display: flex;
+    height: 10px;
+    justify-content: center;
+    width: 10px;
+}
+
+.toggle_circle {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 22px;
+    height: 22px;
+    background-color: #fafafa;
+    border: 1px solid #4d4d4d;
+    border-radius: 50%;
+}
+
+
+/*
+.bar_search {
+    padding-right: 0;
+    position: relative;
+    margin-left: 16px;
+    color: #fff;
+}
+
+.search_input {
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    outline: 0;
+    appearance: none;
+    background: #4d4d4d;
+    color: white;
+    cursor: text;
+    display: inline-block;
+    font-size: .9rem;
+    height: 2rem;
+    padding: 0 .5rem 0 2.25rem;
+    width: 12.5rem;
+}
+
+.search_hint {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    height: 100%;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.kbd {
+    background-color: black;
+    border: 1px solid grey;
+    color: grey;
+}*/
 
 @media (min-width: 997px) {}
