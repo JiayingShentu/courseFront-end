@@ -264,8 +264,8 @@ body {
     position: relative;
     z-index: 1;
     background-color: #000;
-    border-bottom: 1px solid var(--home-border-color);
-    border-top: 1px solid var(--home-border-color);
+    border-bottom: 1px solid rgba(78, 202, 255, .3);
+    border-top: 1px solid rgba(78, 202, 255, .3);
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -278,7 +278,6 @@ body {
     z-index: 1;
     height: 100%;
     position: relative;
-    transition-property: transform;
     width: 100%;
 }
 
@@ -286,7 +285,6 @@ body {
     flex-shrink: 0;
     height: 100%;
     position: relative;
-    transition-property: transform;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -322,7 +320,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 1240px;
+    padding: 108px 43px 0;
     max-width: 1240px;
     overflow: hidden;
     padding-top: 108px;
@@ -390,6 +388,7 @@ body {
 }
 
 .card_LAt6 {
+    max-width: 48%;
     background: hsla(0, 0%, 100%, .1);
     border: 1px solid hsla(0, 0%, 100%, .2);
     border-radius: 8px;
@@ -400,7 +399,7 @@ body {
     height: 135px;
     margin-bottom: 16px;
     margin-left: 16px;
-    max-width: 32%;
+    /*max-width: 32%;*/
     padding: 0 35.4px;
     transition: .3s;
     align-items: center;
@@ -427,6 +426,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 121px auto 90px;
+    padding: 0 40px;
     max-width: 1240px;
     width: 100%;
 }
@@ -569,11 +569,10 @@ body {
     flex-direction: column;
     padding: 24px 26px;
     position: absolute;
-    width: 483px;
+    width: 47.3%;
     border: 1px solid hsla(0, 0%, 100%, .2);
     cursor: pointer;
     transition: .3s;
-    box-sizing: border-box;
     font-size: 20px;
     font-weight: 500;
 }
