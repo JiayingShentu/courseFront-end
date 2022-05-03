@@ -44,6 +44,9 @@
         margin-top: 42px;
         width: 100%;
     }
+    .base-bar .toggle {
+        display: inherit;
+    }
     /********tabs***********/
     /*******homepage********/
     .features_A {
