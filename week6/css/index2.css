@@ -1,0 +1,194 @@
+@media screen and (max-width: 966px) {
+    .base-bar .bartag {
+        display: none;
+    }
+    .header {
+        align-items: center;
+        background-image: url(https://lf3-static.bytednsdoc.com/obj/eden-cn/aphqeh7uhohpquloj/modern-js/banner-mobile-bg.png);
+        padding: 2rem;
+        background-origin: border-box;
+        background-position: center bottom;
+        background-size: cover;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        height: 691px;
+        justify-content: flex-start;
+        overflow: hidden;
+        position: relative;
+        background-color: #00b3ff;
+        color: white;
+    }
+    .modernjs_logo {
+        width: 70vw;
+    }
+    .modernjs_title {
+        font-size: 8vw;
+    }
+    .modernjs_buttons {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 30px;
+        width: 65%;
+    }
+    .modernjs_run {
+        width: 100%;
+    }
+    .modernjs_run img {
+        margin-left: 8px;
+        height: auto;
+    }
+    .modernjs_learn {
+        margin-left: 0;
+        margin-top: 42px;
+        width: 100%;
+    }
+    /********tabs***********/
+    /*******homepage********/
+    .features_A {
+        padding: 70px 21.5px 0;
+    }
+    .features_wrap {
+        background-size: 51.6vw 4.51vw;
+    }
+    .features_title {
+        font-size: 4.96vw;
+        padding-top: 13.5px;
+    }
+    .features_icon {
+        display: none;
+    }
+    .card_list {
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .card_LAt6 {
+        flex: none;
+        height: 70px;
+        margin: 0 0 12px;
+        padding: 0 31px;
+        width: 100%;
+        max-width: none;
+    }
+    .card_icon {
+        height: 20px;
+        width: 20px;
+    }
+    .card_LAt6 span {
+        color: #fff;
+        display: inline-block;
+        margin-left: 20px;
+    }
+    /*********feature**********/
+    .features_model {
+        display: flex;
+        margin-top: 41px;
+        padding: 0 21.5px;
+    }
+    .section_title {
+        font-size: 4vw;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .feature2_container {
+        overflow-x: auto;
+        width: 100%;
+    }
+    .feature2 {
+        margin-bottom: 14px;
+        margin-top: 8px;
+        width: 100%;
+    }
+    .feature2_card {
+        height: 53.2vw;
+        margin-bottom: 0;
+        padding: 33.5px 3.9vw;
+        width: 52vw;
+    }
+    /**/
+    .title_lxKc {
+        margin-top: 30px;
+        display: inline-block;
+        line-height: 1.4;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .card_container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -16px;
+        margin-top: 16px;
+    }
+    /**/
+    .feature3_card {
+        height: 34vw;
+        margin-bottom: 16px;
+        padding: 33.5px 3.9vw;
+        width: calc(50% - 16px);
+    }
+    .img_card {
+        max-width: 100%;
+    }
+    .flow_container {
+        height: auto;
+        overflow: visible;
+    }
+    .flow {
+        display: none;
+    }
+    .card4 {
+        margin-top: 20px;
+        padding: 3.5vw 2.3vw;
+        position: static;
+        width: 100%;
+    }
+    .title_jyKp {
+        font-size: 26px;
+    }
+    .leftDot {
+        display: none;
+    }
+    .rightDot {
+        display: none;
+    }
+    .card4_icon {
+        height: calc(100% - 7vw);
+        width: calc(100% - 4.6vw);
+    }
+    .card_left_section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .card_right_section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .card_left_section .card_section_wrap {
+        max-width: 100%;
+        width: 100%;
+    }
+    .card_right_section .card_section_wrap {
+        max-width: 100%;
+        width: 100%;
+    }
+    .card_left_section .card_section_title {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    .card_right_section .card_section_title {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    .seeDetails {
+        display: none;
+    }
+    .card_img_wrap {
+        min-height: auto;
+        min-width: auto;
+        max-width: 100%;
+        width: 100%;
+    }
+}
