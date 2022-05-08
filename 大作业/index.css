@@ -1,0 +1,24 @@
+.background {
+    position: relative;
+    width: 400px;
+    height: 720px;
+    background-color: black;
+}
+
+.livingSquare {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 40px;
+    left: 40px;
+    background-color: skyblue;
+}
+
+.deadSquare {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 40px;
+    left: 40px;
+    background-color: white;
+}
