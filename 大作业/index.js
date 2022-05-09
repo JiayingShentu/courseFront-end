@@ -28,7 +28,8 @@ const MODELS = [
         }
     }
 ];
-
+//固定不动的方块的集合
+var deadModel = {};
 //变量
 //当前使用的模型
 var currentModel = {};
@@ -45,10 +46,11 @@ function createModel() {
     current_x = 0;
     current_y = 0;
     //确定使用的模型
-    currentModel = MODELS[0];
+    currentModel = deepClone(MODELS[0]);
+    //有问题……
     console.log('bian', currentModel[0].row);
-    console.log('bubian', currentModel[0].row)
-        //生成对应数量的块元素
+    console.log('bubian', currentModel[0].row);
+    //生成对应数量的块元素
     for (var key in currentModel) {
         var divEle = document.createElement('div');
         divEle.className = 'livingSquare';
@@ -57,6 +59,7 @@ function createModel() {
     //定位块元素位置
     locationBlocks();
 }
+
 
 //根据数据源定位块元素的位置
 function locationBlocks() {
@@ -96,7 +99,7 @@ function onKeyDown() {
                 console.log('right');
                 break;
         }
-        isFixed();
+        isFixed(); //如果有触底，则将模块固定
     }
 }
 
@@ -104,8 +107,8 @@ function move(x, y) {
     //控制模块进行移动
     current_x = current_x + x;
     current_y = current_y + y;
-    //判断是否越界可以移动，越界则取消模块移动
-    if (!checkBorder()) {
+    //如果移动会导致越界或碰撞，则取消模块移动
+    if (!checkBorder() || !checkCollision()) {
         current_x = current_x - x;
         current_y = current_y - y;
     }
@@ -119,6 +122,15 @@ function rotate() {
         var tmp = blockModel.row;
         blockModel.row = blockModel.col;
         blockModel.col = 3 - tmp;
+    }
+    //如果旋转会导致越界或碰撞，则不旋转
+    if (!checkBorder() || !checkCollision()) {
+        for (var key in currentModel) {
+            var blockModel = currentModel[key];
+            var tmp = blockModel.col;
+            blockModel.col = blockModel.row;
+            blockModel.row = 3 - tmp;
+        }
     }
     locationBlocks();
 }
@@ -140,10 +152,12 @@ function checkBorder() {
 
 function isFixed() {
     var livingSquares = document.getElementsByClassName('livingSquare');
-    if (atBottom()) {
+    if (atBottom() || downCollide()) {
         for (var i = livingSquares.length - 1; i >= 0; i--) {
             var livingSquare = livingSquares[i];
             livingSquare.className = 'deadSquare';
+            var blockModel = currentModel[i];
+            deadModel[(current_y + blockModel.row) + '_' + (current_x + blockModel.col)] = livingSquare;
         }
         createModel();
     }
@@ -156,4 +170,24 @@ function atBottom() {
         if (row == ROW_MAX - 1) return true;
     }
     return false;
+}
+
+function downCollide() {
+    for (var key in currentModel) {
+        var blockModel = currentModel[key];
+        var row = blockModel.row + current_y;
+        var col = blockModel.col + current_x;
+        if (deadModel[(row + 1) + '_' + col] != null) return true;
+    }
+    return false;
+}
+
+function checkCollision() {
+    for (var key in currentModel) {
+        var blockModel = currentModel[key];
+        var row = blockModel.row + current_y;
+        var col = blockModel.col + current_x;
+        if (deadModel[row + '_' + col] != null) return false;
+    }
+    return true;
 }
