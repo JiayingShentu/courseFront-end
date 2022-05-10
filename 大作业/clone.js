@@ -1,3 +1,4 @@
+//深度克隆函数
 function deepClone(origin, target) {
     var target = target || {};
     toStr = Object.prototype.toString, //对象调用toSting()
