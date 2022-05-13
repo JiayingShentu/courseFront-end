@@ -1,6 +1,6 @@
 //常量
 //每次移动的距离
-var STEP = 40;
+var STEP = 20;
 //行和列
 var ROW_MAX = 18;
 var COL_MAX = 10;
