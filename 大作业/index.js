@@ -1,4 +1,12 @@
-//常量
+var socket = io('ws://localhost:4000');
+socket.on('waiting', function() {
+    document.getElementById('test').innerHTML = 'waiting for another player';
+});
+socket.on('start', function() {
+    init();
+})
+
+
 //每次移动的距离
 var STEP = 20;
 //行和列
@@ -106,21 +114,22 @@ const MODELS = [
         }
     }
 ];
-//固定不动的方块的集合
+//分数
+var score = 0;
+//底部固定的所有方块
 var deadModel = {};
-//变量
-//当前使用的模型
+//当前使用的模型，从MODEL中任意挑选
 var currentModel = {};
-//main入口
+//main
 function init() {
     createModel();
     onKeyDown();
 }
-init();
+//init();
 
 //根据模型的数据源来创建对应的块元素
 function createModel() {
-    //模块归位
+    //下落起始位置
     current_x = 0;
     current_y = -3;
     //随机确定使用的模型
@@ -133,22 +142,21 @@ function createModel() {
         document.getElementsByClassName('background')[0].appendChild(divEle);
     }
     //定位块元素位置
-    locationBlocks();
+    setBlocks();
     //自动下落
     fallDown();
 }
 
 
 //根据数据源定位块元素的位置
-function locationBlocks() {
-    //1.拿到所有块元素
+function setBlocks() {
+    //所有运动的方块
     var livingSquares = document.getElementsByClassName('livingSquare');
     for (var i = 0; i < livingSquares.length; i++) {
-        //单个块元素
         var livingSquare = livingSquares[i];
         //找到每个块元素对应的数据
         var blockModel = currentModel[i];
-        //根据每个块元素对应的数据来指定块元素的位置
+        //确定位置
         if (current_y + blockModel.row < 0) {
             livingSquare.style.display = 'none';
         } else {
@@ -196,7 +204,7 @@ function move(x, y) {
         current_y = current_y - y;
     }
 
-    locationBlocks();
+    setBlocks();
     if (y == 1) {
         isFixed(); //如果有触底，则将模块固定
     }
@@ -219,7 +227,7 @@ function rotate() {
             blockModel.row = 3 - tmp;
         }
     }
-    locationBlocks();
+    setBlocks();
 }
 
 function checkBorder() {
@@ -245,11 +253,15 @@ function isFixed() {
             var blockModel = currentModel[i];
             deadModel[(current_y + blockModel.row) + '_' + (current_x + blockModel.col)] = livingSquare;
         }
-        var fullRow = checkRowFull();
-        if (fullRow != -1) {
-            deleteRow(fullRow);
-            deadModelFall(fullRow);
-        }
+        for (var j = 0; j < 4; j++) {
+            var fullRow = checkRowFull();
+            if (fullRow != -1) {
+                deleteRow(fullRow);
+                deadModelFall(fullRow);
+                score = score + 1;
+                document.getElementById('localScore').innerHTML = score;
+            }
+        } //应该修复了bug，当同时有多行满格时，这几行会同时消除
         createModel();
     }
 }

@@ -11,9 +11,17 @@
     <!--背景-->
     <div class="background">
     </div>
+    <div id="localScore">0</div>
+    <div id="test"></div>
     <script src="socket.io.js"></script>
     <script src="clone.js"></script>
     <script src="index.js"></script>
+    <!--<script>
+        var socket = io('ws://localhost:4000');
+        socket.on('doSomething', function() {
+            document.getElementById('test').innerHTML = 'hello world';
+        })
+    </script>-->
 </body>
 
 </html>
