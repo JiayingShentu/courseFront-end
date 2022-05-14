@@ -35,13 +35,13 @@
     background-color: grey;
 }
 
-#localScore {
+#local {
     position: absolute;
     bottom: 10px;
     left: 10%;
 }
 
-#remoteScore {
+#remote {
     position: absolute;
     bottom: 10px;
     left: 60%;

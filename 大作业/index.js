@@ -123,8 +123,6 @@ const MODELS = [
         }
     }
 ];
-var colors = ['#FF6666', '#FFFF66', '#99CC66', '#0099CC', '#996699', '#CC3333']
-var color = Math.floor(Math.random() * 6);
 //分数
 var score = 0;
 //底部固定的所有方块
@@ -150,7 +148,6 @@ function createModel() {
     for (var key in currentModel) {
         var divEle = document.createElement('div');
         divEle.className = 'livingSquare';
-        divEle.style.backgroundColor = color;
         document.getElementsByClassName('background')[0].appendChild(divEle);
 
     }
