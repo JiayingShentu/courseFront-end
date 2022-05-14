@@ -21,11 +21,6 @@ server.listen(4000, function() {
     console.log('port is listening');
 });
 
-/*io.on('connection', function(socket) {
-        console.log('connection');
-        socket.emit('doSomething');
-    })*/
-
 // 玩家人数
 var playerNum = 0;
 
@@ -37,7 +32,8 @@ io.on('connection', function(socket) {
     console.log('playNum', playerNum);
     socket.clientNum = playerNum;
     socketMap[playerNum] = socket;
-
+    var player1 = true,
+        player2 = true;
     if (playerNum % 2 == 1) {
         socket.emit('waiting');
     } else {
@@ -45,27 +41,30 @@ io.on('connection', function(socket) {
             socket.emit('start');
             socketMap[(playerNum - 1)].emit('start');
             playerNum = playerNum - 2;
-            /*//定时做分数查询、分数传输的工作
-            var timer = setInterval(function() {
-                socketMap[1].emit('askScore');
-                socketMap[2].emit('askScore');
-                socketMap[1].on('score', function(score) {
-                    socketMap[2].emit('remoteScore', score);
-                });
-                socketMap[2].on('score', function(score) {
-                    var remoteScore = score;
-                    socketMap[1].emit('remoteScore', remoteScore);
-                    console.log('yyyy');
-                });
-
-            }, 1000)*/
+            //定时做分数传输的工作
+            socketMap[1].on('score', function(score) {
+                socketMap[2].emit('remoteScore', score);
+            });
+            socketMap[2].on('score', function(score) {
+                socketMap[1].emit('remoteScore', score);
+            });
+            //判断输赢
+            socketMap[1].on('gameOver', function() {
+                player1 = false;
+                if (player2 == true) {
+                    socketMap[2].emit('result', 'WIN');
+                    socketMap[1].emit('result', 'LOSE');
+                }
+            });
+            socketMap[2].on('gameOver', function() {
+                player2 = false;
+                if (player1 == true) {
+                    socketMap[1].emit('result', 'WIN');
+                    socketMap[2].emit('result', 'LOSE');
+                }
+            })
         } else {
             socket.emit('leave');
         }
     }
-
 });
-
-io.on('send', function() {
-    console.log('yes');
-})

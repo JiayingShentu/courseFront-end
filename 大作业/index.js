@@ -1,20 +1,26 @@
 var socket = io('ws://localhost:4000');
 socket.on('waiting', function() {
     document.getElementById('test').innerHTML = 'wait a minute...';
-});
+})
 socket.on('start', function() {
     document.getElementById('test').innerHTML = '';
-    socket.emit('send');
     init();
 });
-/*socket.on('askScore', function(socket) {
-    console.log('yyy');
+socket.on('remoteScore', function(score) {
+    document.getElementById('remoteScore').innerHTML = score;
+});
+socket.on('result', function(str) {
+    alert('YOU ' + str + ' !');
+});
+
+
+
+//分数/结束状态flag，定时传输分数数据
+var score = 0;
+var flag = true; //没有结束
+var time2 = setInterval(function() {
     socket.emit('score', score);
-})
-socket.on('remoteScore', function(remoteScore) {
-    document.getElementById('remoteScore').innerHTML = remoteScore;
-})
-*/
+}, 1000);
 
 //每次移动的距离
 var STEP = 30;
@@ -123,8 +129,7 @@ const MODELS = [
         }
     }
 ];
-//分数
-var score = 0;
+
 //底部固定的所有方块
 var deadModel = {};
 //当前使用的模型，从MODEL中任意挑选
@@ -359,5 +364,7 @@ function gameOver() {
     if (timer != null) {
         clearInterval(timer);
     }
-    alert('游戏结束');
+    //flag = false; //给服务端传递的游戏状态
+    //alert('游戏结束');
+    socket.emit('gameOver');
 }
