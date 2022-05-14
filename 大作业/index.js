@@ -7,17 +7,17 @@ socket.on('start', function() {
     socket.emit('send');
     init();
 });
-socket.on('askScore', function(isocket) {
+/*socket.on('askScore', function(isocket) {
     console.log('yyy');
     isocket.emit('score', score);
 })
 socket.on('remoteScore', function(remoteScore) {
     document.getElementById('remoteScore').innerHTML = remoteScore;
 })
-
+*/
 
 //每次移动的距离
-var STEP = 20;
+var STEP = 30;
 //行和列
 var ROW_MAX = 18;
 var COL_MAX = 10;
@@ -123,6 +123,8 @@ const MODELS = [
         }
     }
 ];
+var colors = ['#FF6666', '#FFFF66', '#99CC66', '#0099CC', '#996699', '#CC3333']
+var color = Math.floor(Math.random() * 6);
 //分数
 var score = 0;
 //底部固定的所有方块
@@ -148,7 +150,9 @@ function createModel() {
     for (var key in currentModel) {
         var divEle = document.createElement('div');
         divEle.className = 'livingSquare';
+        divEle.style.backgroundColor = color;
         document.getElementsByClassName('background')[0].appendChild(divEle);
+
     }
     //定位块元素位置
     setBlocks();

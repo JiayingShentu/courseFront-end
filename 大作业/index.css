@@ -1,25 +1,49 @@
+.wrap {
+    position: relative;
+    left: 50%;
+    transform: translateX(-180px);
+    width: 360px;
+    height: 600px;
+    background-color: bisque;
+}
+
 .background {
     position: relative;
-    width: 200px;
-    height: 360px;
+    left: 50%;
+    transform: translateX(-150px);
+    top: 20px;
+    width: 300px;
+    height: 540px;
     background-color: white;
-    border: 1px solid grey;
 }
 
 .livingSquare {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 20px;
-    left: 20px;
+    width: 30px;
+    height: 30px;
+    top: 30px;
+    left: 30px;
     background-color: skyblue;
 }
 
 .deadSquare {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 20px;
-    left: 20px;
-    background-color: white;
+    width: 30px;
+    height: 30px;
+    top: 30px;
+    left: 30px;
+    background-color: grey;
+}
+
+#localScore {
+    position: relative;
+    bottom: -5px;
+    left: 10%;
+}
+
+#remoteScore {
+    position: relative;
+    bottom: -5px;
+    left: 60%;
+    ;
 }

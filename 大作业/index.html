@@ -9,11 +9,15 @@
 
 <body>
     <!--背景-->
-    <div class="background">
+    <div class="wrap">
+        <div class="background">
+        </div>
+        <div id="localScore">local score
+            <apan>0</apan>
+        </div>
+        <div id="remoteScore">remote score<span>0</span></div>
+        <div id="test"></div>
     </div>
-    <div id="localScore">0</div>
-    <div id="remoteScore">0</div>
-    <div id="test"></div>
     <script src="socket.io.js"></script>
     <script src="clone.js"></script>
     <script src="index.js"></script>
