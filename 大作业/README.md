@@ -5,7 +5,7 @@
 :white_check_mark: 满行后删除整行，上层方块下移一层，并计分      
 :white_check_mark: 判断游戏结束     
 
-## 附加功能
+## 附加功能（socket.io)
 :white_check_mark: 服务器自动分配对手      
 
 ## 尚未实现功能
