@@ -45,7 +45,7 @@ io.on('connection', function(socket) {
             socket.emit('start');
             socketMap[(playerNum - 1)].emit('start');
             playerNum = playerNum - 2;
-            //定时做分数查询、分数传输的工作
+            /*//定时做分数查询、分数传输的工作
             var timer = setInterval(function() {
                 socketMap[1].emit('askScore');
                 socketMap[2].emit('askScore');
@@ -58,7 +58,7 @@ io.on('connection', function(socket) {
                     console.log('yyyy');
                 });
 
-            }, 1000)
+            }, 1000)*/
         } else {
             socket.emit('leave');
         }

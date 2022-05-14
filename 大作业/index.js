@@ -1,15 +1,15 @@
 var socket = io('ws://localhost:4000');
 socket.on('waiting', function() {
-    document.getElementById('test').innerHTML = 'waiting a minute...';
+    document.getElementById('test').innerHTML = 'wait a minute...';
 });
 socket.on('start', function() {
     document.getElementById('test').innerHTML = '';
     socket.emit('send');
     init();
 });
-/*socket.on('askScore', function(isocket) {
+/*socket.on('askScore', function(socket) {
     console.log('yyy');
-    isocket.emit('score', score);
+    socket.emit('score', score);
 })
 socket.on('remoteScore', function(remoteScore) {
     document.getElementById('remoteScore').innerHTML = remoteScore;
