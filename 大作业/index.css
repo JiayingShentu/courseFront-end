@@ -2,7 +2,8 @@
     position: relative;
     width: 200px;
     height: 360px;
-    background-color: black;
+    background-color: white;
+    border: 1px solid grey;
 }
 
 .livingSquare {

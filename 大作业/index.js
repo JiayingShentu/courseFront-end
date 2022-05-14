@@ -1,9 +1,18 @@
 var socket = io('ws://localhost:4000');
 socket.on('waiting', function() {
-    document.getElementById('test').innerHTML = 'waiting for another player';
+    document.getElementById('test').innerHTML = 'waiting a minute...';
 });
 socket.on('start', function() {
+    document.getElementById('test').innerHTML = '';
+    socket.emit('send');
     init();
+});
+socket.on('askScore', function(isocket) {
+    console.log('yyy');
+    isocket.emit('score', score);
+})
+socket.on('remoteScore', function(remoteScore) {
+    document.getElementById('remoteScore').innerHTML = remoteScore;
 })
 
 
